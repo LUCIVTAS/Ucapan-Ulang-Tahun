@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ucapan Ulang Tahun Risa</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+    body {
+      margin: 0;
+      padding: 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #ffccd9, #ffd6e8);
+      color: #9c174f;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #e91e63;
+      text-shadow: 1px 1px 3px #fff;
+      animation: pulse 3s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(233, 30, 99, 0.3);
+      padding: 25px 40px;
+      position: relative;
+    }
+
+    .decorations {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 2rem;
+      animation: swing 2.5s infinite ease-in-out;
+      user-select: none;
+    }
+
+    .decorations:nth-child(2) {
+      top: auto;
+      bottom: 10px;
+      left: 10px;
+      animation-delay: 1.2s;
+    }
+
+    @keyframes swing {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(10deg); }
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1.15rem;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .audio-player {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    audio {
+      outline: none;
+      cursor: pointer;
+      border-radius: 15px;
+      background: #f8bbd0;
+      box-shadow: 0 0 10px #e91e63aa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Selamat Ulang Tahun, Risa Maisarah Nurhalisa! 🎉🎈</h1>
+
+    <div class="decorations" style="top: 5px; right: 5px;">🎂</div>
+    <div class="decorations" style="bottom: 5px; left: 5px;">🎀</div>
+
+    <p>Hai Risa,</p>
+    <p>Hari ini adalah hari istimewa yang penuh warna dan kebahagiaan, sama seperti senyum ceriamu yang selalu menghangatkan hati kakak. Semoga setiap detik ulang tahunmu membawa sejuta harapan baru dan mimpi-mimpi indah yang siap untuk diwujudkan.</p>
+    <p>Ingatlah selalu bahwa hidup adalah perjalanan yang penuh kejutan, kadang manis kadang pahit, tapi kakak yakin kamu punya kekuatan dan keceriaan yang luar biasa untuk melewatinya. Jangan takut mencoba hal baru, dan selalu percaya bahwa setiap usaha akan berbuah indah.</p>
+    <p>Kakak sangat berterima kasih sudah menjadi adek angkat yang lucu dan penuh semangat. Semoga tali persaudaraan kita terus erat dan kita bisa terus saling mendukung di segala cerita dan perjalanan hidup.</p>
+    <p>Semoga ulang tahun ini menjadi titik awal dari segala keberhasilan dan kebahagiaan yang akan datang. Tetap ceria, tetap rendah hati, dan jadilah versi terbaik dari dirimu setiap hari.</p>
+    <p>Selamat ulang tahun, Risa! Semoga segala doa dan harapanmu terkabul dengan indah.</p>
+    <p>Salam sayang dan peluk hangat dari kakak,</p>
+    <p><em>Kakak yang selalu menyayangimu.</em></p>
+
+    <div class="audio-player">
+      <audio id="audioPlayer" controls style="width: 100%; max-width: 400px;">
+    <source id="audioSource" src="https://media.vocaroo.com/mp3/1owK7K6yXPxR" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <script>
+    const audio = document.getElementById('audioPlayer');
+
+    function playMusic() {
+      audio.play();
+    }
+
+    function pauseMusic() {
+      audio.pause();
+    }
+  </script>
+      <p>Putar lagu ulang tahun untuk menambah semangat 🎵</p>
+    </div>
+  </div>
+</body>
+</html>
+

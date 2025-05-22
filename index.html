@@ -1,0 +1,101 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buka Amplop</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #ffc2d1);
+      overflow: hidden;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      position: relative;
+    }
+    .envelope {
+      width: 200px;
+      height: 150px;
+      background-color: #fff;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transition: transform 0.5s ease;
+    }
+    .envelope::before, .envelope::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+    .envelope::before {
+      top: -50px;
+      left: 0;
+      border-width: 50px 100px 0 100px;
+      border-color: #fff transparent transparent transparent;
+    }
+    .envelope::after {
+      bottom: 0;
+      left: 0;
+      border-width: 0 100px 50px 100px;
+      border-color: transparent transparent #fff transparent;
+    }
+    .floating-text {
+      margin-top: 20px;
+      font-size: 18px;
+      animation: float 2s infinite;
+      color: #d63384;
+      font-weight: bold;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+    .decor {
+      position: absolute;
+      font-size: 30px;
+      animation: confetti 3s infinite ease-in-out;
+    }
+    .decor:nth-child(1) { top: 10%; left: 20%; }
+    .decor:nth-child(2) { top: 20%; right: 15%; animation-delay: 0.5s; }
+    .decor:nth-child(3) { bottom: 20%; left: 25%; animation-delay: 1s; }
+    .decor:nth-child(4) { bottom: 15%; right: 20%; animation-delay: 1.5s; }
+    .decor:nth-child(5) { top: 50%; left: 45%; animation-delay: 0.8s; }
+    @keyframes confetti {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(20px); opacity: 0.5; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="decor">🎈</div>
+    <div class="decor">🎂</div>
+    <div class="decor">🎀</div>
+    <div class="decor">🎉</div>
+    <div class="decor">🌸</div>
+
+    <div class="envelope" onclick="openLetter()"></div>
+    <div class="floating-text">Klik amplop untuk membuka surat 🎁</div>
+  </div>
+  <script>
+    function openLetter() {
+      window.location.href = 'ucapan.html';
+    }
+  </script>
+</body>
+</html>
+
+<!-- ucapan.html -->
+<!-- Halaman kedua akan menyusul setelah konfirmasi -->
+
