@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -9,7 +9,7 @@
 
     body {
       margin: 0;
-      padding: 30px;
+      padding: 20px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to right, #ffccd9, #ffd6e8);
       color: #9c174f;
@@ -18,7 +18,7 @@
 
     h1 {
       font-family: 'Pacifico', cursive;
-      font-size: 3rem;
+      font-size: 2.5rem;
       text-align: center;
       margin-bottom: 10px;
       color: #e91e63;
@@ -33,28 +33,31 @@
 
     .container {
       max-width: 700px;
+      width: 90%;
       margin: 0 auto;
       background: rgba(255, 255, 255, 0.85);
       border-radius: 15px;
       box-shadow: 0 0 15px rgba(233, 30, 99, 0.3);
-      padding: 25px 40px;
+      padding: 25px 30px;
       position: relative;
     }
 
     .decorations {
       position: absolute;
-      top: 10px;
-      right: 10px;
       font-size: 2rem;
       animation: swing 2.5s infinite ease-in-out;
       user-select: none;
     }
 
     .decorations:nth-child(2) {
-      top: auto;
       bottom: 10px;
       left: 10px;
       animation-delay: 1.2s;
+    }
+
+    .decorations:first-child {
+      top: 10px;
+      right: 10px;
     }
 
     @keyframes swing {
@@ -64,7 +67,7 @@
 
     p {
       line-height: 1.6;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       margin-bottom: 20px;
       text-align: justify;
     }
@@ -80,6 +83,27 @@
       border-radius: 15px;
       background: #f8bbd0;
       box-shadow: 0 0 10px #e91e63aa;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    /* ✅ Responsif untuk HP */
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .container {
+        padding: 20px 20px;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .decorations {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -87,8 +111,8 @@
   <div class="container">
     <h1>Selamat Ulang Tahun, Risa Maisarah Nurhalisa! 🎉🎈</h1>
 
-    <div class="decorations" style="top: 5px; right: 5px;">🎂</div>
-    <div class="decorations" style="bottom: 5px; left: 5px;">🎀</div>
+    <div class="decorations">🎂</div>
+    <div class="decorations">🎀</div>
 
     <p>Hai Risa,</p>
     <p>Hari ini adalah hari istimewa yang penuh warna dan kebahagiaan, sama seperti senyum ceriamu yang selalu menghangatkan hati kakak. Semoga setiap detik ulang tahunmu membawa sejuta harapan baru dan mimpi-mimpi indah yang siap untuk diwujudkan.</p>
@@ -100,22 +124,10 @@
     <p><em>Kakak yang selalu menyayangimu.</em></p>
 
     <div class="audio-player">
-      <audio id="audioPlayer" controls style="width: 100%; max-width: 400px;">
-    <source id="audioSource" src="https://media.vocaroo.com/mp3/1owK7K6yXPxR" type="audio/mpeg">
-    Browser kamu tidak mendukung audio.
-  </audio>
-
-  <script>
-    const audio = document.getElementById('audioPlayer');
-
-    function playMusic() {
-      audio.play();
-    }
-
-    function pauseMusic() {
-      audio.pause();
-    }
-  </script>
+      <audio id="audioPlayer" controls>
+        <source id="audioSource" src="https://media.vocaroo.com/mp3/1owK7K6yXPxR" type="audio/mpeg">
+        Browser kamu tidak mendukung audio.
+      </audio>
       <p>Putar lagu ulang tahun untuk menambah semangat 🎵</p>
     </div>
   </div>
